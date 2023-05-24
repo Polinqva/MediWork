@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AFEAA072A1CD38A00F7C164 /* MediWorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA062A1CD38A00F7C164 /* MediWorkApp.swift */; };
+		9AFEAA092A1CD38A00F7C164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA082A1CD38A00F7C164 /* ContentView.swift */; };
+		9AFEAA0B2A1CD38D00F7C164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFEAA0A2A1CD38D00F7C164 /* Assets.xcassets */; };
+		9AFEAA0E2A1CD38D00F7C164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFEAA0D2A1CD38D00F7C164 /* Preview Assets.xcassets */; };
+		9AFEAA102A1CD38D00F7C164 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA0F2A1CD38D00F7C164 /* Persistence.swift */; };
+		9AFEAA132A1CD38D00F7C164 /* MediWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA112A1CD38D00F7C164 /* MediWork.xcdatamodeld */; };
+		9AFEAA1A2A1E3D3E00F7C164 /* test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AFEAA192A1E3D3D00F7C164 /* test-data.json */; };
+		9AFEAA1F2A1E410600F7C164 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA1E2A1E410600F7C164 /* PersonModel.swift */; };
+		9AFEAA212A1E413100F7C164 /* PersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEAA202A1E413100F7C164 /* PersonPresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9AFEAA032A1CD38A00F7C164 /* MediWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFEAA062A1CD38A00F7C164 /* MediWorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediWorkApp.swift; sourceTree = "<group>"; };
+		9AFEAA082A1CD38A00F7C164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9AFEAA0A2A1CD38D00F7C164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AFEAA0D2A1CD38D00F7C164 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9AFEAA0F2A1CD38D00F7C164 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9AFEAA122A1CD38D00F7C164 /* MediWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediWork.xcdatamodel; sourceTree = "<group>"; };
+		9AFEAA192A1E3D3D00F7C164 /* test-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "test-data.json"; path = "../../../Downloads/test-data.json"; sourceTree = "<group>"; };
+		9AFEAA1E2A1E410600F7C164 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		9AFEAA202A1E413100F7C164 /* PersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPresenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AFEAA002A1CD38A00F7C164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AFEA9FA2A1CD38A00F7C164 = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA192A1E3D3D00F7C164 /* test-data.json */,
+				9AFEAA052A1CD38A00F7C164 /* MediWork */,
+				9AFEAA042A1CD38A00F7C164 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AFEAA042A1CD38A00F7C164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA032A1CD38A00F7C164 /* MediWork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AFEAA052A1CD38A00F7C164 /* MediWork */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA0F2A1CD38D00F7C164 /* Persistence.swift */,
+				9AFEAA062A1CD38A00F7C164 /* MediWorkApp.swift */,
+				9AFEAA1B2A1E3FA300F7C164 /* View */,
+				9AFEAA0A2A1CD38D00F7C164 /* Assets.xcassets */,
+				9AFEAA1C2A1E3FB400F7C164 /* Model */,
+				9AFEAA1D2A1E3FDC00F7C164 /* Presenter */,
+				9AFEAA112A1CD38D00F7C164 /* MediWork.xcdatamodeld */,
+				9AFEAA0C2A1CD38D00F7C164 /* Preview Content */,
+			);
+			path = MediWork;
+			sourceTree = "<group>";
+		};
+		9AFEAA0C2A1CD38D00F7C164 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA0D2A1CD38D00F7C164 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9AFEAA1B2A1E3FA300F7C164 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA082A1CD38A00F7C164 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AFEAA1C2A1E3FB400F7C164 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA1E2A1E410600F7C164 /* PersonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AFEAA1D2A1E3FDC00F7C164 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9AFEAA202A1E413100F7C164 /* PersonPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AFEAA022A1CD38A00F7C164 /* MediWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AFEAA162A1CD38D00F7C164 /* Build configuration list for PBXNativeTarget "MediWork" */;
+			buildPhases = (
+				9AFEA9FF2A1CD38A00F7C164 /* Sources */,
+				9AFEAA002A1CD38A00F7C164 /* Frameworks */,
+				9AFEAA012A1CD38A00F7C164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediWork;
+			productName = MediWork;
+			productReference = 9AFEAA032A1CD38A00F7C164 /* MediWork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AFEA9FB2A1CD38A00F7C164 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9AFEAA022A1CD38A00F7C164 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 9AFEA9FE2A1CD38A00F7C164 /* Build configuration list for PBXProject "MediWork" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9AFEA9FA2A1CD38A00F7C164;
+			productRefGroup = 9AFEAA042A1CD38A00F7C164 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AFEAA022A1CD38A00F7C164 /* MediWork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AFEAA012A1CD38A00F7C164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFEAA1A2A1E3D3E00F7C164 /* test-data.json in Resources */,
+				9AFEAA0E2A1CD38D00F7C164 /* Preview Assets.xcassets in Resources */,
+				9AFEAA0B2A1CD38D00F7C164 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AFEA9FF2A1CD38A00F7C164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFEAA102A1CD38D00F7C164 /* Persistence.swift in Sources */,
+				9AFEAA092A1CD38A00F7C164 /* ContentView.swift in Sources */,
+				9AFEAA1F2A1E410600F7C164 /* PersonModel.swift in Sources */,
+				9AFEAA072A1CD38A00F7C164 /* MediWorkApp.swift in Sources */,
+				9AFEAA132A1CD38D00F7C164 /* MediWork.xcdatamodeld in Sources */,
+				9AFEAA212A1E413100F7C164 /* PersonPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9AFEAA142A1CD38D00F7C164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9AFEAA152A1CD38D00F7C164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AFEAA172A1CD38D00F7C164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MediWork/Preview Content\"";
+				DEVELOPMENT_TEAM = 8F895HZ77T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.polinasmirnova.MediWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9AFEAA182A1CD38D00F7C164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MediWork/Preview Content\"";
+				DEVELOPMENT_TEAM = 8F895HZ77T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.polinasmirnova.MediWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AFEA9FE2A1CD38A00F7C164 /* Build configuration list for PBXProject "MediWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AFEAA142A1CD38D00F7C164 /* Debug */,
+				9AFEAA152A1CD38D00F7C164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AFEAA162A1CD38D00F7C164 /* Build configuration list for PBXNativeTarget "MediWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AFEAA172A1CD38D00F7C164 /* Debug */,
+				9AFEAA182A1CD38D00F7C164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9AFEAA112A1CD38D00F7C164 /* MediWork.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9AFEAA122A1CD38D00F7C164 /* MediWork.xcdatamodel */,
+			);
+			currentVersion = 9AFEAA122A1CD38D00F7C164 /* MediWork.xcdatamodel */;
+			path = MediWork.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9AFEA9FB2A1CD38A00F7C164 /* Project object */;
+}
