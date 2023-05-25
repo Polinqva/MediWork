@@ -112,15 +112,25 @@ struct CardView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("ID: \(person.id)")
-                .font(.headline)
+            HStack {
+                Text("\(person.firstName) \(person.lastName)")
+                    .font(.headline)
+                Spacer()
+                Button(action: {
+                    isExpanded.toggle()
+                }) {
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                        .padding(.vertical, 1)
+                }
+            }
             
             if isExpanded {
                 Divider()
-                Text("First Name: \(person.firstName)")
+                Text("ID: \(person.id)")
                     .font(.headline)
-                Text("Last Name: \(person.lastName)")
-                    .font(.headline)
+               
                 Text("Created Date: \(person.created)")
                     .font(.headline)
                 Text("Company: \(person.roleTitle)")
@@ -134,18 +144,6 @@ struct CardView: View {
                 Text("Email: \(person.email ?? "")")
                     .font(.headline)
             }
-            
-            HStack {
-                Spacer()
-                Button(action: {
-                    isExpanded.toggle()
-                }) {
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .padding(.vertical, 4)
-                }
-            }
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -154,6 +152,7 @@ struct CardView: View {
         .shadow(radius: 3)
     }
 }
+
 
 enum SortOption: String, CaseIterable {
     case id = "ID"
