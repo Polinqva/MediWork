@@ -11,6 +11,7 @@ struct ContentView: View {
     private let presenter = PersonPresenter()
     private var persons: [PersonModel] { presenter.getPersons() }
     @State private var isExpanded = false
+    @State private var filterOption: EngagementType? = nil
     @State private var sortOption: SortOption = .id
     @State private var sortedPersons: [PersonModel] = []
     
@@ -18,20 +19,40 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 if isExpanded {
-                    Picker("Sort Option", selection: $sortOption) {
-                        ForEach(SortOption.allCases, id: \.self) { option in
-                            Text(option.displayName).tag(option)
+                    HStack {
+                        Picker("Filter Option", selection: $filterOption) {
+                            Text("Filter by").tag(nil as EngagementType?)
+                            ForEach(EngagementType.allCases, id: \.self) { option in
+                                Text(option.rawValue).tag(option as EngagementType?)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                        .padding(.horizontal)
+                        .onChange(of: filterOption) { _ in
+                            sortedPersons = sortPersons()
+                        }
+                        
+                        Picker("Sort Option", selection: $sortOption) {
+                            ForEach(SortOption.allCases, id: \.self) { option in
+                                Text(option.displayName).tag(option)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                        .padding(.horizontal)
+                        .onChange(of: sortOption) { _ in
+                            sortedPersons = sortPersons()
                         }
                     }
-                    .pickerStyle(MenuPickerStyle())
-                    .padding(.horizontal)
+                    .padding(.vertical)
                 }
                 
                 List {
                     ScrollView {
                         VStack(spacing: 20) {
                             ForEach(sortedPersons, id: \.id) { person in
-                                CardView(person: person)
+                                if filterOption == nil || person.engagementType == filterOption?.rawValue ?? "" {
+                                    CardView(person: person)
+                                }
                             }
                         }
                         .padding()
@@ -53,35 +74,34 @@ struct ContentView: View {
                     }
                 }
             }
-            .onChange(of: sortOption) { _ in
-                sortedPersons = sortPersons()
-            }
+        }
+        .onAppear {
+            presenter.parseJSON(from: "test-data")
         }
     }
-    init() {
-        presenter.parseJSON(from: "test-data")
-    }
-
+    
     func sortPersons() -> [PersonModel] {
+        let filteredPersons = filterOption != nil ? persons.filter { $0.engagementType == filterOption?.rawValue ?? "" } : persons
+        
         switch sortOption {
         case .id:
-            return persons.sorted { $0.id < $1.id }
+            return filteredPersons.sorted { $0.id < $1.id }
         case .firstName:
-            return persons.sorted { $0.firstName < $1.firstName }
+            return filteredPersons.sorted { $0.firstName < $1.firstName }
         case .lastName:
-            return persons.sorted { $0.lastName < $1.lastName }
+            return filteredPersons.sorted { $0.lastName < $1.lastName }
         case .createdDate:
-            return persons.sorted { $0.created < $1.created }
+            return filteredPersons.sorted { $0.created < $1.created }
         case .company:
-            return persons.sorted { $0.roleTitle < $1.roleTitle }
+            return filteredPersons.sorted { $0.roleTitle < $1.roleTitle }
         case .status:
-            return persons.sorted { $0.engagementType < $1.engagementType }
+            return filteredPersons.sorted { $0.engagementType < $1.engagementType }
         case .phone:
-            return persons.sorted { $0.fixedLinePhone < $1.fixedLinePhone }
+            return filteredPersons.sorted { $0.fixedLinePhone < $1.fixedLinePhone }
         case .mobile:
-            return persons.sorted { ($0.mobilePhone ?? "") < ($1.mobilePhone ?? "") }
+            return filteredPersons.sorted { ($0.mobilePhone ?? "") < ($1.mobilePhone ?? "") }
         case .email:
-            return persons.sorted { ($0.email ?? "") < ($1.email ?? "") }
+            return filteredPersons.sorted { ($0.email ?? "") < ($1.email ?? "") }
         }
     }
 }
@@ -151,8 +171,15 @@ enum SortOption: String, CaseIterable {
     }
 }
 
+enum EngagementType: String, CaseIterable {
+    case employed = "Employed"
+    case student = "Student"
+    case contractor = "Contractor"
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
